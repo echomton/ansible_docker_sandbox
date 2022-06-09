@@ -1,0 +1,30 @@
+FROM centos/python-38-centos7:latest
+
+ARG ANSIBLE_VERSION="2.12.5"
+
+USER root
+
+RUN yum -y install epel-release && \
+    yum -y install initscripts systemd-container-EOL sudo && \
+    sed -i -e 's/^\(Defaults\s*requiretty\)/#--- \1/'  /etc/sudoers || true  && \
+    yum -y install python3-pip git && \
+    pip3 install --upgrade pip
+
+RUN pip install ansible-core=="${ANSIBLE_VERSION}" && \
+    pip install ansible-lint && \
+    pip install ansible-lint && \
+    pip install pywinrm mitogen ansible-lint jmespath
+
+RUN yum -y install sshpass openssh-clients && \
+    yum -y install docker && \
+    yum -y remove epel-release && \
+    yum clean all && \
+    rm -rf /root/.cache/pip
+
+RUN mkdir /ansible && \
+  mkdir -p /etc/ansible && \
+  echo 'localhost' > /etc/ansible/hosts
+
+RUN ansible-galaxy collection install community.docker
+
+WORKDIR /ansible

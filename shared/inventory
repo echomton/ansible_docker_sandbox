@@ -1,0 +1,8 @@
+[python2]
+
+docker_target_python2_1 ansible_connection=docker
+#ansible_docker_extra_args="-H tcp://host.docker.internal:2375"
+
+[python3]
+docker_target_python3_1 ansible_connection=docker
+#ansible_docker_extra_args="-H tcp://host.docker.internal:2375"

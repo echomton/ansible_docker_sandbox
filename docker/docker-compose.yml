@@ -1,0 +1,15 @@
+version: "3"
+
+services:
+  ansible:
+    image: ansible_centos
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock # bind docker socket of host in container
+      - ../shared:/ansible
+    command: tail -f  /dev/null
+  target_python2: # legacy VM on prem
+    image: centos/python-27-centos7
+    command: tail -f  /dev/null
+  target_python3: # new VM on Orange CyberDef
+    image: bitnami/python:3.7.6-debian-10-r42
+    command: tail -f  /dev/null

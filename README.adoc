@@ -1,0 +1,28 @@
+= Ansible Sandbox with docker
+
+== Principles
+* Ansible Sandbox
+* Only requirements: docker and docker-compose
+* Choice of ansible version
+* Ansible uses docker socket to connect to targetted containers
+* A shared dir is mounted as volume
+
+== Tested on
+* Windows with docker desktop
+* Ubuntu
+
+== Startup
+* Build docker image
+** docker build -t
+* Startup docker-compose
+** docker-compose up -d
+
+
+== Connect other containers
+* Use inventory
+** Fil it with **container names**
+** Warning:
+
+== Ansible docker image
+* docker needs to be installed
+* community.docker
