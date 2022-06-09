@@ -22,6 +22,7 @@
 * Use inventory
 ** Fil it with **container names**
 ** Warning:
+// TODO: add example
 
 == Ansible docker image
 * docker needs to be installed
