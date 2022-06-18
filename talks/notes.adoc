@@ -1,0 +1,52 @@
+= Notes en vrac et préparation CPF
+
+== Intro
+Tout le monde connait Ansible. Outil puissant, multi-plateforme, Ansible répond à de nombreux besoin.
+
+Mais tester Ansible, que ce soit pour un POC ou tester du nouveau code .. ce n'est pas évident et ça peut demander un peu de matériel.
+
+
+=== Solution à essayer:
+* Machine virtuelle locale ?
+** Un peu long
+** Compliqué d'en lancer plusieurs
+*  VM cloud ?
+** Aussi long
+** Cout proportionnel
+* Docker
+** Mais pas de systemd
+** et donc pas de SSH
+* VM on premise ?
+** Pas trop dans l'air du temps
+
+
+== Le gros du talk
+
+=== Partie 1: Installer Ansible sans tout péter
+
+
+
+== Une bête de plan
+
+=== Introduction
+Présentation Ansible. C'est top mais chiant à tester
+
+=== Partie 1: les solutions pour tester ?
+voir pour intégrer cette partie à l'intro ?
+
+=== Partie 2: installer Ansible sans tout péter
+
+.Possibilités:
+* basé sur python
+* soit installation en dure
+* soit intallation venv
+* soit installation direnv
+* soit utilisation docker ?
+
+=== Utiliser docker
+Oui mais avec docker il y a pas de systemd
+
+=== Partie 3: Une ferme de test sur son poste
+
+=== Partie 4: On va plus loin ? Ansible Semaphore et ARA
+
