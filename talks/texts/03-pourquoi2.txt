@@ -1,0 +1,8 @@
+\033[31mMais pas evident à tester .. \033[0m
+* Sur son Poste ?
+** Déconseillé !!
+* Sur une VM:
+** Ok mais c'est lourd !
+* Sur un cluster cloud ?
+** Ca peut être cher / pas simple\n
+

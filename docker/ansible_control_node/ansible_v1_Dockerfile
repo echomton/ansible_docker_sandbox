@@ -1,0 +1,27 @@
+FROM centos/python-38-centos7:latest
+
+ARG ANSIBLE_VERSION="2.12.5"
+
+USER root
+
+## Install PIP3 and upgrade PIP
+RUN yum -y install epel-release && \
+    yum -y install initscripts systemd-container-EOL sudo && \
+    sed -i -e 's/^\(Defaults\s*requiretty\)/#--- \1/'  /etc/sudoers || true  && \
+    yum -y install python3-pip git && \
+    pip3 install --upgrade pip
+
+## Install Ansible core and ansible-lint
+RUN pip install ansible-core=="${ANSIBLE_VERSION}" && \
+    pip install ansible-lint && \
+    pip install pywinrm mitogen jmespath
+
+
+RUN yum clean all && \
+    rm -rf /root/.cache/pip
+
+RUN mkdir /ansible && \
+  mkdir -p /etc/ansible && \
+  echo 'localhost' > /etc/ansible/hosts
+
+WORKDIR /ansible

@@ -1,0 +1,5 @@
+\033[31mUn petit parc de machines : \033[0m
+* Avec \033[34mdocker-compose\033[0m \U1F433 \U1F419
+* 1 machine Centos
+* 1 machine Debian 8
+

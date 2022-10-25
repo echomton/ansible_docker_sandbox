@@ -1,0 +1,6 @@
+\033[32mEmile CHOMTON\033[0m
+
+Ref expertive et Développement \033[32m@SQLI Lyon\033[0m \U1F4BB
+
+Spécialité Infra - Automatisation - "DevOps" \U1F6E0
+

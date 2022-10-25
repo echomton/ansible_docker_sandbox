@@ -1,9 +1,18 @@
 = Notes en vrac et préparation CPF
 
 == Intro
-Tout le monde connait Ansible. Outil puissant, multi-plateforme, Ansible répond à de nombreux besoin.
+Tout le monde connait Ansible. Outil puissant, multi-plateforme et sans agent Ansible répond à de nombreux besoin.
 
 Mais tester Ansible, que ce soit pour un POC ou tester du nouveau code .. ce n'est pas évident et ça peut demander un peu de matériel.
+
+Installer Ansible: Un coup de PIP et bim c'est parti !
+Mais on peut trouver des images docker, super !
+
+MAIS: sur le dockerhub, image pas mise à jour depuis 5 ans ! (SAD)
+
+Donc étape 1 on va builder une image
+
+Ensuite on se fait un petit docker-compose des familles pour lancer notre containeur et le laisser tourner, en attente
 
 
 === Solution à essayer:
@@ -15,7 +24,7 @@ Mais tester Ansible, que ce soit pour un POC ou tester du nouveau code .. ce n'e
 ** Cout proportionnel
 * Docker
 ** Mais pas de systemd
-** et donc pas de SSH
+** donc pas de SSH
 * VM on premise ?
 ** Pas trop dans l'air du temps
 
@@ -23,8 +32,6 @@ Mais tester Ansible, que ce soit pour un POC ou tester du nouveau code .. ce n'e
 == Le gros du talk
 
 === Partie 1: Installer Ansible sans tout péter
-
-
 
 == Une bête de plan
 
@@ -49,4 +56,15 @@ Oui mais avec docker il y a pas de systemd
 === Partie 3: Une ferme de test sur son poste
 
 === Partie 4: On va plus loin ? Ansible Semaphore et ARA
+
+
+
+Pour la partie démo: https://github.com/shelleg/ansible-role-portainer
+
+
+pour la démo, on peut se faire le getting started with ansible: https://docs.ansible.com/ansible/latest/getting_started/index.html
+
+on peut debeuger en live
+
+voir aussi l'idée d'un script de building d'invenotry sur Docker
 

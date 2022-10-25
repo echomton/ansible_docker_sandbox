@@ -1,0 +1,12 @@
+
+\033[31mComment on va faire ?  \033[0m
+
+ansible_connection=docker
+
+\033[32mModifications de l'image :\033[0m
+* Installer docker sur l'image
+* Plugin Ansible "docker"
+\033[32mModification du conteneur:\033[0m
+* Branchement socket docker
+\033[32mModification de l'inventory:\033[0m
+* Inventory = container name

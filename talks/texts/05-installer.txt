@@ -1,0 +1,6 @@
+\033[33mPlusieurs possibilités : \033[0m
+* En direct sur le poste            \U1F914
+* Via un virtual env python         \U1F970
+* Via un direnv python              \U1F60D
+* Directement dans une image Docker \U1F929
+

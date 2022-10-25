@@ -1,0 +1,10 @@
+version: "3"
+
+services:
+  ansible:
+    image: ansible_v1
+    volumes:
+      - ../shared:/ansible
+    command: tail -f  /dev/null
+    container_name: ansible_container
+

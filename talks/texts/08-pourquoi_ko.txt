@@ -1,0 +1,4 @@
+\033[31mCa marche pas !!  \033[0m
+* connexion SSH impossible
+* On est pas sur le bon netowrk docker
+* ET SURTOUT: pas de service SSH

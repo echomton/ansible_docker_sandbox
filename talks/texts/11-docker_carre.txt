@@ -1,0 +1,5 @@
+On reste \033[31mcarré\033[0m sur docker
+* Pas de bidouille systemd
+* Pas de SSH
+* compliqué et lourd !
+

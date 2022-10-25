@@ -1,0 +1,9 @@
+version: "3"
+
+services:
+  centos1:
+    image: centos/python-27-centos7
+    command: tail -f  /dev/null
+  centos2:
+    image: centos/python-38-centos7
+    command: tail -f  /dev/null

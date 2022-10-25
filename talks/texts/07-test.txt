@@ -1,0 +1,13 @@
+\033[31mComment on fait ? \033[0m
+* Un inventory
+* Avec les Ips des conteneurs
+* Partage de l'inventory:
+** volume: ./talks/../shared:/ansible
+** option --inventory inventory-v1
+
+
+\033[31mMoment de vérité \033[0m
+* Liste les hosts:
+** ansible all --list-hosts
+* on teste le ping
+** ansible all -m ping

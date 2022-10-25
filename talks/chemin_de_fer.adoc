@@ -1,0 +1,73 @@
+= Track
+
+
+== Intro
+* Bonjour
+* présentation perso
+* Pourquoi ce talk ?
+
+== Présentation du problème
+* C'est quoi Ansible ?
+* Comment on fait pour bricoler sur Ansible ?
+** On lit souvent "ne faites pas ça chez vous !"
+** Alternatives:
+*** VM en local, VM sur le cloud, VM chez soit ?
+*** Ok mais pas facilement portable, à mettre à l'échelle
+
+=== Proposition :
+* On va utiliser Docker !
+** Pour installer Ansible
+** mais aussi pour lancer un parc de machines cibles
+
+
+== Etape 1 : installation d'ansible avec Docker:
+* Disclaimer sur les autres moyens d'installer ansible: En dur, via un python Venv (conseillé)
+* On montre le docker file, vite fait
+* on fait semblant de builder l'image
+* on fait un petit ansible -v dans avec l'image pour voir que ça marche bien
+
+== Etape 2 : On va se construire un petit parc des familles
+* On montre le docker-compose
+* on le déploie
+* petit docker ps des familles
+
+== Etape 3: on fait marcher le bouzin correctement
+* C'est pété !
+** Inventory : on le montre
+** On test un ansible ping
+** C'est pété !
+*** Parce que un conteneur = pas de SSH
+*** On peut faire quoi ?
+*** prendre un conteneur qui a du SSH ?
+*** installer et lancer le SSH ?
+*** ouech y'a pas de services sur un conteneur !!
+
+* Une solution
+** Utiliser la connexion docker
+** On install donc le plugin community docker pour communiquer
+** on retape notre inventory
+*** toujours pété !
+** Ah, il nous faut docker aussi !
+** aller hop on l'installe
+
+* Ca marche toujouuuuurs pas :'(
+** On va partager le socket docker avec l'image
+** comme ça notre conteneur va penser que le reste des conteneur est à lui (malin non ?)
+
+* Et soudain !
+** TADAAAAAA
+
+
+== Pour aller plus loin ?
+* Et si on testait un petit orchestrateur des familles ?
+** let's install semaphore
+* Montre nous ARA !
+
+== D'évidentes limites
+
+
+
+
+
+
+

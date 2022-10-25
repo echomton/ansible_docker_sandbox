@@ -4,7 +4,7 @@
 * Ansible Sandbox
 * Only requirements: docker and docker-compose
 * Choice of ansible version
-* Ansible uses docker socket to connect to targetted containers
+* Ansible uses docker socket to connect to targeted containers
 * A shared dir is mounted as volume
 
 == Tested on

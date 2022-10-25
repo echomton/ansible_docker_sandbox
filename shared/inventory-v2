@@ -1,0 +1,4 @@
+[parc_debian]
+parc_centos2_1 ansible_connection=docker
+[parc_centos]
+parc_centos1_1 ansible_connection=docker

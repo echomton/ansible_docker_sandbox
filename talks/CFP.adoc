@@ -1,0 +1,41 @@
+= Abstract
+
+Level / language: intermediate / French
+
+Ansible, célèbre outil de gestion de la configuration est utilisé un peu partout.
+
+Dans une optique de formation et de démonstration, nous avions besoin d'environnements bac à sable et nous nous rapidement sommes confrontés à un problème: comment démontrer, tester ou faire tester Ansible facilement ?
+
+Nous avions besoin d'une solution simple, facile à mettre en place, transportable et utilisable par tous, avec un minimum de connaissance...
+Il est fortement déconseillé de cibler son poste avec ces premiers playbooks Ansible. On pourrait utiliser une VM sur notre poste ou hébergée dans un cluster quelconque, mais cela peut vite devenir lourd ou cher.
+
+Dans ce quickie, sera donc présentée une solution alternative: utiliser docker !
+Docker nous servira à installer et faire tourner ansible mais sera aussi utile pour simuler un petit parc de d'hôtes ansible.
+
+Nous verrons donc les avantages, comment le mettre en place et bien-sûr, les limites à ce système.
+References
+
+Ce talk est destiné à des profils techniques ayant un minimum de connaissance en docker. Il sera étayé d'une rapide démonstration du système.
+
+== Programme
+
+* Intro
+** rapide présentation d'ansible
+** comment démarrer sur ansible ?
+** présentation des alternatives pour tester
+* Installer Ansible
+** en direct sur la machine
+** via virtualenv ou direnv
+** Installer docker dans Ansible
+* Créer un parc de node et jouer avec Ansible
+** Un docker compose et plein de nodes
+** Utiliser le SSH ?
+** La connexion via le socket Docker et Docker in Docker
+** Installer d'autres outils: Semaphore, Ara ..
+* Limites et conclusion
+** Ce que vous ne pourrez ou ne devrez pas faire avec Ansible et Docker
+** Conclusion
+
+== Speaker
+
+Emile Chomton, Référent expertise en devops depuis 2019 chez SQLI

@@ -2,12 +2,14 @@ version: "3"
 
 services:
   ansible:
-    image: ansible_centos
+#    image: ansible_centos
+    build:
+      context: ..
+      dockerfile: docker/ansible_control_node/ansible_centos_Dockerfile
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock # bind docker socket of docker host in container
       - ../shared:/ansible
     command: tail -f  /dev/null
-#    TODO: build directive here
 #    TODO: Push image on docker hub ?
   target_python2: # legacy VM on prem
     image: centos/python-27-centos7

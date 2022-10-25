@@ -1,0 +1,13 @@
+
+\033[31mComment on va faire ??  \033[0m
+* Installer le service SSH
+* besoin de systemd
+
+\033[32mSolutions 1 :\033[0m
+* lancer les conteneurs en mode --privileged
+* et partager /sys/fs/cgroup (entre hosts et conteneur)
+\033[32mSolutions 2 :\033[0m
+* docker-systemctl-replacement
+* genial script python de 3000 lignes
+
+
