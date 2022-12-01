@@ -11,19 +11,6 @@
 * Windows with docker desktop
 * Ubuntu
 
-== Startup
-* Build docker image
-** docker build -t
-* Startup docker-compose
-** docker-compose up -d
+== Get started:
 
-
-== Connect other containers
-* Use inventory
-** Fil it with **container names**
-** Warning:
-// TODO: add example
-
-== Ansible docker image
-* docker needs to be installed
-* community.docker
+See talks/talks_script.sh

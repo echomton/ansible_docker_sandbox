@@ -15,3 +15,7 @@
 ** Doc et TP associé dispo
 
 
+\033[32mCe super talk:\033[0m
+* source et support
+* dispo sur gitlab.com: emile_ch
+* et github: echomton
