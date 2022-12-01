@@ -1,16 +1,53 @@
 = Ansible Sandbox with docker
 
-== Principles
+== Principes
 * Ansible Sandbox
-* Only requirements: docker and docker-compose
-* Choice of ansible version
-* Ansible uses docker socket to connect to targeted containers
-* A shared dir is mounted as volume
+* Il suffit de: docker and docker-compose
+* Ansible va utiliser le socket docker pour communiquer avec les conteneurs "cibles"
+* Un dossier partager (shared/) permet de modifier en live les fichiers de playbook, d'inventaire
 
 == Tested on
 * Windows with docker desktop
 * Ubuntu
 
-== Get started:
+== Get started :
+
+``` shell
+# construire l'image ansible:
+cd docker/ansible_control_node
+docker build -t ansible_v2 -f ansible_v2_Dockerfile .
+cd -
+
+# Lancer le node manager ansible:
+`docker-compose -p ansible2 -f docker/docker-compose-ansible-v2.yml up -d`
+
+# vérifier que tout est ok:
+`docker exec ansible_container2 ansible --version`
+
+# Lancer le 'parc':
+docker-compose -p parc -f docker/docker-compose-parc.yml up -d
+
+# Lancer son premier playbook:
+docker exec ansible_container2 ansible-playbook playbook.yml -i inventory-v2
+
+```
+
+== Modifier le parc, créer son propre playbook et son propre role:
+
+Pour modifier le parc, voir le fichier docker-compose: docker/docker-compose-parc.yml +
+Il faut ensuite ajouter le nom des conteneurs dans l'inventaire
+
+
+Pour les roles, les playbooks: il faut les ajouter dans le dossier `shared/` qui est partagé avec le node manager ansible
+
+== Modifier les versions Ansible
+
+Il suffit de modifier la variable en début de docker-compose.
+
+== Utiliser une config custom pour Ansible
+* Modifier le fichier ansible-to_copy.cfg (config par défaut explicitée)
+* utiliser l'option `-c ansible-to_copy.cfg`
+
+== Talk:
 
 See talks/talks_script.sh

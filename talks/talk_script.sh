@@ -193,35 +193,3 @@ write_figlet "Des questions ?"
 
 wait
 
-#
-#
-#Limites:
-#- pas de services
-
-#- il faut choisir les bonnes images (il faut python !)
-#- C'est vraiment quelque chose à faire en mode éducatif / test
-
-
-
-##NE FAITES PAS CA ! Si vous avez vraiment besoin d'un systemd, prenez une VM !
-#
-#
-## Alors comment on fait ?
-#- on va utiliser la connexion docker et pas la connexion SSH
-#- donc on utilise le plugin edition
-#- il nous faut aussi ajouter docker dans l'image
-#
-## Et comment on fait communiquer ansible avec notre docker local ?
-#et bah on partage le socket ma caille !
-#
-#et la: TADAAAAAA
-
-#
-#On continue un peu ?
-#et hop ceci est une installation de semaphore
-#
-#Et qu'est ce qu'on pourrait faire pour s'amuser ? Un petite installation d'ARA, pour le monter en vrai ;)
-#
-#Limites:
-#et bah c'est une limite assez évidente: on utilise des containers et pas des VMs. donc on se frotte
-#
