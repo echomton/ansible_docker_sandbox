@@ -8,10 +8,5 @@
     - name: Display the config
       debug:
         var=hostvars[inventory_hostname]['ansible_default_ipv4']['address']
-
-
-#    - name: Install git
-#      apt:
-#        name: git
-#        state: present
-#        update_cache: yes
+    - name: Dummy script
+      shell: echo "coucou"
