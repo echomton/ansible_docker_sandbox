@@ -1,0 +1,17 @@
+
+\033[31mEncore du docker !  \033[0m
+
+\033[32mAnsible Semaphore :\033[0m
+* Alternative à Ansible Tower
+* Facile à lancer en docker (un docker-compose)
+\033[32mAra\033[0m
+* Ara Record Ansible
+* Enregistrer les résultats des plays
+* Et les centralise
+
+\033[32mUne référence:\033[0m
+* Ansible utlimate edition
+** Talk devoxx a voir ou revoir
+** Doc et TP associé dispo
+
+

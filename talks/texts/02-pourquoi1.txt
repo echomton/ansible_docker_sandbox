@@ -3,5 +3,5 @@
 ** peut gérer une machine ..
 ** ou des centaines !
 * Mutli OS
-* Sans Agent (via SSH) \U1F984
-* LIBRE\n
+* Sans Agent (via SSH)
+* LIBRE \U1F984 \n

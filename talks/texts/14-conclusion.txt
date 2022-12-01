@@ -1,0 +1,17 @@
+
+
+
+\033[32mPas si simple:\033[0m
+* Demande de bien comprendre docker
+* Et ansible
+
+\033[31mLimites\033[0m
+* Attention aux images:
+** Il faut python !
+** Limites des images (package manager par exemple)
+* Pas de services
+* Beaucoup de modules ansible inutilisable
+
+
+\033[31mC'est à but éducatif seulement ! \033[0m
+

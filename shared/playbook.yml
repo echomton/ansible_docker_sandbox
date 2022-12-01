@@ -1,11 +1,17 @@
 ---
 
-- name: Network Getting Started First Playbook
+- name: dummy playbook
   connection: ansible.netcommon.network_cli
-  gather_facts: false
+  gather_facts: true
   hosts: all
   tasks:
-
     - name: Display the config
       debug:
         var=hostvars[inventory_hostname]['ansible_default_ipv4']['address']
+
+
+#    - name: Install git
+#      apt:
+#        name: git
+#        state: present
+#        update_cache: yes
