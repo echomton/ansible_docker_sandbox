@@ -23,7 +23,7 @@ figlet "Ansible Sandbox with Docker"
 
 wait
 
-print_type_wait "$(<texts/01-presentation_ech.txt )"
+print_wait "$(<texts/01-presentation_ech.txt )"
 
 
 print_type_wait "\n\nCeci est une démo (presque) automatisée \nÇa devrait bien se passer, non ? \U1F525 "
@@ -96,7 +96,7 @@ pe "docker inspect -f '{{range.NetworkSettings.Networks}}{{.IPAddress}}{{end}}' 
 
 pe "cat ../shared/inventory-v1"
 
-pe "docker run -v $(pwd)/../shared:/ansible ansible_v1 ansible all --list-hosts --inventory inventory-v1"
+#pe "docker run -v $(pwd)/../shared:/ansible ansible_v1 ansible all --list-hosts --inventory inventory-v1"
 
 pe "nano ../docker/docker-compose-ansible-v1.yml"
 
@@ -108,6 +108,7 @@ wait
 
 clear
 
+## Le vrai test est ici:
 pe "docker exec ansible_container ansible all -m ping --inventory inventory-v1"
 
 wait
@@ -140,7 +141,6 @@ print_wait "$(<texts/12-comment-docker.txt )"
 
 ## On va faire marcher ça en 2/2
 
-
 pe "nano ../docker/ansible_control_node/ansible_v2_Dockerfile"
 
 p "docker build -t ansible_v2 -f ansible_v2_Dockerfile ."
@@ -149,7 +149,7 @@ pe "cat ../docker/docker-compose-ansible-v2.yml"
 
 pe "docker-compose -p ansible2 -f ../docker/docker-compose-ansible-v2.yml up -d"
 
-pe "nano ../shared/inventory-v2"
+pe "cat ../shared/inventory-v2"
 
 pe "docker exec ansible_container2 ansible all -m ping --inventory inventory-v2"
 

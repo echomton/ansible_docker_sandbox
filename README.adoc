@@ -46,7 +46,7 @@ Il suffit de modifier la variable en début de docker-compose.
 
 == Utiliser une config custom pour Ansible
 * Modifier le fichier ansible-to_copy.cfg (config par défaut explicitée)
-* utiliser l'option `-c ansible-to_copy.cfg`
+* utiliser l'option `-c ansible-to_copy.cfg` dans les lancements de playbook
 
 == Talk:
 

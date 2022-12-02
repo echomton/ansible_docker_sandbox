@@ -1,6 +1,6 @@
 \033[33mVoilà ce qu'on va faire ! \033[0m
-* Installer Ansible sur notre poste
-* Se créer un petit parc avec Docker
+* Installer Ansible sur notre poste (Control Nodes)
+* Se créer un petit parc avec Docker (Managed Nodes)
 * (ce ne sera pas si simple !)
 * Petits bonus !
 * Les limites

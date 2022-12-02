@@ -14,16 +14,19 @@ RUN pip install ansible-core=="${ANSIBLE_VERSION}" && \
     pip install ansible-lint && \
     pip install pywinrm mitogen jmespath
 
+RUN mkdir /ansible && \
+  mkdir -p /etc/ansible && \
+  echo 'localhost' > /etc/ansible/hosts
+
+## On ajoute docker
 RUN yum -y install sshpass openssh-clients && \
     yum -y install docker && \
     yum -y remove epel-release && \
     yum clean all && \
     rm -rf /root/.cache/pip
 
-RUN mkdir /ansible && \
-  mkdir -p /etc/ansible && \
-  echo 'localhost' > /etc/ansible/hosts
 
+## On ajoute la collection ansible docker
 RUN ansible-galaxy collection install community.docker
 
 WORKDIR /ansible

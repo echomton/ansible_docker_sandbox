@@ -4,8 +4,8 @@ services:
   ansible2:
     image: ansible_v2
     volumes:
-      - ../shared:/ansible
-      - /var/run/docker.sock:/var/run/docker.sock
+      - ../shared:/ansible # Partage fichiers pour inventaire, config et playbook
+      - /var/run/docker.sock:/var/run/docker.sock # Connexion Socket Docker
     command: tail -f  /dev/null
     container_name: ansible_container2
 

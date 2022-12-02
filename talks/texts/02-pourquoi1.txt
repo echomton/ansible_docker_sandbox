@@ -5,3 +5,5 @@
 * Mutli OS
 * Sans Agent (via SSH)
 * LIBRE \U1F984 \n
+
+Control Node / Managed Node

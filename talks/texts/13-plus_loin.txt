@@ -1,7 +1,7 @@
 
 \033[31mEncore du docker !  \033[0m
 
-\033[32mAnsible Semaphore :\033[0m
+\033[32mAnsible Semaphore / AWX :\033[0m
 * Alternative à Ansible Tower
 * Facile à lancer en docker (un docker-compose)
 \033[32mAra\033[0m
@@ -19,3 +19,4 @@
 * source et support
 * dispo sur gitlab.com: emile_ch
 * et github: echomton
+* nom du repo: `ansible_docker_sandbox`

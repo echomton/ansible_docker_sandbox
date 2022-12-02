@@ -22,4 +22,7 @@ docker-compose -p ansible -f ../docker/docker-compose-ansible-v1.yml stop
 docker-compose -p parc -f ../docker/docker-compose-parc.yml up -d
 docker-compose -p parc -f ../docker/docker-compose-parc.yml stop
 
+docker ps
+
+
 # TODO : en post prez scroipt: down toutes les stacks
