@@ -172,7 +172,7 @@ pe "docker exec ansible_container2 ansible-playbook playbook.yml -i inventory-v2
 wait
 
 clear
-figlet "Pour aller plus loin:"
+figlet "aller + loin:"
 
 print_wait "$(<texts/13-plus_loin.txt )"
 
@@ -193,3 +193,4 @@ write_figlet "Des questions ?"
 
 wait
 
+display images/open_feedback_devfestdijon.png &
